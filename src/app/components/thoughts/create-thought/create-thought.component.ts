@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { ThoughtService } from '../thought.service';
+import { Pensamento } from '../thought-interface';
 
 @Component({
   selector: 'app-create-thought',
@@ -14,21 +16,24 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class CreateThoughtComponent {
   //pensamento = atributo que vai ser um objeto
-  pensamento = {
+  pensamento: Pensamento = {
     conteudo: '',
     autoria: '',
     modelo: ''
   }
 
   constructor(
-    private router: Router
+    private router: Router,
+    private service: ThoughtService
   ) { }
 
   ngOnInit(): void {
   }
 
   criarPensamento(){
-    alert('Pensamento criado com sucesso!');
+    this.service.criar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/listarPensamento']);
+    })
   }
 
   cancelar(){

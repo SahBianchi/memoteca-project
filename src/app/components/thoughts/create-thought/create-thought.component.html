@@ -10,7 +10,7 @@
             id="pensamento"
             name="pensamento"
             placeholder="Escreva aqui o seu pensamento"
-            [(ngModel)]="pensamento.conteudo"
+            [(ngModel)]="pensamento.conteudo" 
         >
         <label for="autoria">Autoria</label>
         <input 
@@ -52,6 +52,7 @@
                         id="modelo2"
                         value="modelo2"
                         name="modelo-card"
+                        [(ngModel)]="pensamento.modelo"
                     >
                     <div class="custom-radio">
                         <span></span>
@@ -73,6 +74,7 @@
                         id="modelo3"
                         value="modelo3"
                         name="modelo-card"
+                        [(ngModel)]="pensamento.modelo"
                     >
                     <div class="custom-radio">
                         <span></span>
