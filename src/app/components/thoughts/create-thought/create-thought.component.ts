@@ -17,9 +17,10 @@ import { Pensamento } from '../thought-interface';
 export class CreateThoughtComponent {
   //pensamento = atributo que vai ser um objeto
   pensamento: Pensamento = {
+   
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: 'modelo1'
   }
 
   constructor(
@@ -30,13 +31,13 @@ export class CreateThoughtComponent {
   ngOnInit(): void {
   }
 
-  criarPensamento(){
+  criarPensamento() {
     this.service.criar(this.pensamento).subscribe(() => {
-      this.router.navigate(['/listarPensamento']);
+      this.router.navigate(['/listarPensamento'])
     })
   }
 
-  cancelar(){
-    this.router.navigate(['/listarPensamento']);
+  cancelar() {
+    this.router.navigate(['/listarPensamento'])
   }
 }
