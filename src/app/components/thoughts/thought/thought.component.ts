@@ -16,9 +16,9 @@ import { Pensamento } from '../thought-interface';
 export class ThoughtComponent {
   @Input() pensamento: Pensamento = {
     id: 0,
-    conteudo: 'teste',
-    autoria: 'teste',
-    modelo: 'modelo1'
+    conteudo: '',
+    autoria: '',
+    modelo: ''
   };
 
   larguraPensamento(): string {

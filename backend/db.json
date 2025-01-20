@@ -1,15 +1,15 @@
 {
   "pensamentos": [
     {
-      "conteudo": "test gfgdfg",
-      "autoria": "test gfg",
-      "modelo": "modelo2",
+      "conteudo": "Somos o que fazemos repetidamente. Excelência não é um ato, mas sim um hábito.",
+      "autoria": "William Durant",
+      "modelo": "modelo1",
       "id": 1
     },
     {
-      "conteudo": "gdfgfg",
-      "autoria": "fgsdfg",
-      "modelo": "modelo2",
+      "conteudo": "Você é plenamente capaz de criar a vida que deseja.",
+      "autoria": "Desconhecido",
+      "modelo": "modelo1",
       "id": 2
     }
   ]
