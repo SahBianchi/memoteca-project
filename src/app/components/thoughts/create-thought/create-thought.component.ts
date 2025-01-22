@@ -1,38 +1,38 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { ThoughtService } from '../thought.service';
-import { Pensamento } from '../thought-interface';
 
 @Component({
   selector: 'app-create-thought',
   standalone: true,
   imports: [
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   templateUrl: './create-thought.component.html',
   styleUrl: './create-thought.component.css'
 })
 export class CreateThoughtComponent {
-  //pensamento = atributo que vai ser um objeto
-  pensamento: Pensamento = {
-   
-    conteudo: '',
-    autoria: '',
-    modelo: 'modelo1'
-  }
+  formulario!: FormGroup;
 
   constructor(
     private router: Router,
-    private service: ThoughtService
+    private service: ThoughtService,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      conteudo: ['Formulario Reativo'],
+      autoria: ['angular'],
+      modelo: ['modelo1']
+    });
   }
 
   criarPensamento() {
-    this.service.criar(this.pensamento).subscribe(() => {
+    this.service.criar(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
     })
   }
