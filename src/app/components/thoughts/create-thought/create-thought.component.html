@@ -11,6 +11,9 @@
             formControlName="conteudo"
             placeholder="Escreva aqui o seu pensamento" 
         >
+        <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
+            Pensamento é obrigatório!
+        </div>
         <label for="autoria">Autoria</label>
         <input 
             type="text"
@@ -19,6 +22,12 @@
             formControlName="autoria"
             placeholder="Escreva aqui a autoria ou fonte" 
         >
+        <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched">
+            Autoria é obrigatória!
+        </div>
+        <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minlength'] && formulario.get('autoria')?.touched">
+            Autoria precisa ter mais de 3 caracteres!
+        </div>
         <label for="modelo">Selecione o modelo do card:</label>
         <div class="container-radio">
             <div class="radio-modelo">
@@ -81,13 +90,15 @@
                     <img src="assets/imagens/modelo3.png" alt="Aspas verde água">
                     <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
                     <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
-                    <!-- Property Binding = [value]= 'pensamento.conteudo' e {{ pensamento.conteudo }}<- property binding + interpolação = é o que faz renderizar a informação que está na classe do ts para o html-->
                 </div>
             </div>
         </div>
         <div class="acoes">
-            <!-- Event Binding = (click)="salvarPensamento()" serve para dizer para o ts que o botão foi clicado, é uma forma de fazer a ação ser escutada pelo ts, faz o caminho inverso do property binding -->
-            <button (click)="criarPensamento()" class="botao">Salvar</button>
+            <button 
+                [disabled]="!formulario.valid"
+                (click)="criarPensamento()" 
+                [ngClass]="habilitarBotao()">Salvar
+            </button>
             <button (click)="cancelar()" class="botao">Cancelar</button>
         </div>
     </form>
