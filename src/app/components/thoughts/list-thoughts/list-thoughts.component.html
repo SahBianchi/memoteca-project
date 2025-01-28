@@ -8,9 +8,13 @@
             <app-thought [pensamento]="pensamento"></app-thought>
         </div>
     </div>
-    <ng-template #semPensamentos>
-        <div class="ff-inter sem-pensamentos">
-            <p>Você ainda não adicionou nenhum pensamento.</p>
-        </div>
-    </ng-template>
 </section>
+<app-btn-load-more
+    [haMaisPensamentos]="haMaisPensamentos"
+    (click)="carregarMaisPensamentos()">
+</app-btn-load-more>
+<ng-template #semPensamentos>
+    <div class="ff-inter sem-pensamentos">
+        <p>Você ainda não adicionou nenhum pensamento.</p>
+    </div>
+</ng-template>

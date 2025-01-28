@@ -1,16 +1,64 @@
 {
   "pensamentos": [
-    {
-      "conteudo": "Somos o que fazemos repetidamente. Excelência não é um ato, mas sim um hábito.",
-      "autoria": "William Durant",
-      "modelo": "modelo1",
-      "id": 1
-    },
-    {
-      "conteudo": "Você é plenamente capaz de criar a vida que deseja.",
-      "autoria": "Desconhecido",
-      "modelo": "modelo1",
-      "id": 2
-    }
+     {
+        "conteudo": "A persistência é o caminho do êxito.",
+        "autoria": "Charles Chaplin",
+        "modelo": "modelo1",
+        "id": 1
+     },
+     {
+        "conteudo": "Você nunca será velho demais para traçar outro objetivo ou sonhar um novo sonho.",
+        "autoria": "C.S. Lewis",
+        "modelo": "modelo2",
+        "id": 2
+     },
+     {
+        "conteudo": "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.",
+        "autoria": "Winston Churchill",
+        "modelo": "modelo3",
+        "id": 3
+     },
+     {
+        "conteudo": "Acredite que você pode, e você já estará no meio do caminho.",
+        "autoria": "Theodore Roosevelt",
+        "modelo": "modelo1",
+        "id": 4
+     },
+     {
+        "conteudo": "As dificuldades preparam pessoas comuns para destinos extraordinários.",
+        "autoria": "C.S. Lewis",
+        "modelo": "modelo2",
+        "id": 5
+     },
+     {
+        "conteudo": "A única maneira de fazer um ótimo trabalho é amar o que você faz.",
+        "autoria": "Steve Jobs",
+        "modelo": "modelo3",
+        "id": 6
+     },
+     {
+        "conteudo": "Você é mais forte do que pensa e mais capaz do que imagina.",
+        "autoria": "A.A. Milne",
+        "modelo": "modelo1",
+        "id": 7
+     },
+     {
+        "conteudo": "Não é sobre o destino, mas sobre a jornada.",
+        "autoria": "Ralph Waldo Emerson",
+        "modelo": "modelo2",
+        "id": 8
+     },
+     {
+        "conteudo": "Não importa quão devagar você vá, desde que você não pare.",
+        "autoria": "Confúcio",
+        "modelo": "modelo3",
+        "id": 9
+     },
+     {
+        "conteudo": "A vida é uma longa jornada cheia de altos e baixos. Em alguns dias, você sentirá como se pudesse conquistar o mundo, enquanto em outros, até mesmo levantar da cama parecerá um desafio insuperável. Mas lembre-se: cada pequena vitória importa. Cada passo que você dá, não importa o quão pequeno, o aproxima do seu objetivo. Persista, mesmo quando tudo parecer difícil, pois o crescimento ocorre nos momentos mais desafiadores e a luz sempre segue a escuridão.",
+        "autoria": "Autor desconhecido",
+        "modelo": "modelo1",
+        "id": 10
+     }
   ]
 }
