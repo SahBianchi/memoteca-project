@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Pensamento } from '../thought-interface';
+import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-thought',
@@ -14,11 +15,16 @@ import { Pensamento } from '../thought-interface';
   styleUrl: './thought.component.css'
 })
 export class ThoughtComponent {
+  constructor(
+    private service: ThoughtService,
+  ) { }
+
   @Input() pensamento: Pensamento = {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: '',
+    favorito: false
   };
 
   larguraPensamento(): string {
@@ -26,6 +32,17 @@ export class ThoughtComponent {
       return 'pensamento-g'
     }
     return 'pensamento-p'
+  }
+
+  mudarIconeFavorito(): string {
+    if(this.pensamento.favorito == false) {
+      return 'inativo'
+    }
+    return 'ativo'
+  }
+
+  atualizarFavoritos() {
+    this.service.mudarFavorito(this.pensamento).subscribe()
   }
 
 }

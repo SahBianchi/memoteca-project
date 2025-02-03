@@ -18,12 +18,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './edit-thought.component.css'
 })
 export class EditThoughtComponent {
-  // pensamento: Pensamento = {
-  //   id: 0,
-  //   conteudo: '',
-  //   autoria: '',
-  //   modelo: ''
-  // }
   formulario!: FormGroup;
 
   constructor(
@@ -46,7 +40,8 @@ export class EditThoughtComponent {
           Validators.required,
           Validators.minLength(3)
         ])],
-        modelo: [pensamento.modelo]
+        modelo: [pensamento.modelo],
+        favorito: [pensamento.favorito]
       })
     })
   }
