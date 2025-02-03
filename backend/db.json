@@ -4,7 +4,7 @@
       "conteudo": "A persistência é o caminho do êxito.",
       "autoria": "Charles Chaplin",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 1
     },
     {
@@ -39,7 +39,7 @@
       "conteudo": "A única maneira de fazer um ótimo trabalho é amar o que você faz.",
       "autoria": "Steve Jobs",
       "modelo": "modelo3",
-      "favorito": false,
+      "favorito": true,
       "id": 6
     },
     {
