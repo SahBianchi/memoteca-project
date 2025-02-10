@@ -18,7 +18,7 @@
       "conteudo": "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.",
       "autoria": "Winston Churchill",
       "modelo": "modelo3",
-      "favorito": true,
+      "favorito": false,
       "id": 3
     },
     {
@@ -39,7 +39,7 @@
       "conteudo": "A única maneira de fazer um ótimo trabalho é amar o que você faz.",
       "autoria": "Steve Jobs",
       "modelo": "modelo3",
-      "favorito": true,
+      "favorito": false,
       "id": 6
     },
     {
@@ -53,21 +53,21 @@
       "conteudo": "Não é sobre o destino, mas sobre a jornada.",
       "autoria": "Ralph Waldo Emerson",
       "modelo": "modelo2",
-      "favorito": false,
+      "favorito": true,
       "id": 8
     },
     {
       "conteudo": "Não importa quão devagar você vá, desde que você não pare.",
       "autoria": "Confúcio",
       "modelo": "modelo3",
-      "favorito": false,
+      "favorito": true,
       "id": 9
     },
     {
       "conteudo": "A vida é uma longa jornada cheia de altos e baixos. Em alguns dias, você sentirá como se pudesse conquistar o mundo, enquanto em outros, até mesmo levantar da cama parecerá um desafio insuperável. Mas lembre-se: cada pequena vitória importa. Cada passo que você dá, não importa o quão pequeno, o aproxima do seu objetivo. Persista, mesmo quando tudo parecer difícil, pois o crescimento ocorre nos momentos mais desafiadores e a luz sempre segue a escuridão.",
       "autoria": "Autor desconhecido",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 10
     }
   ]

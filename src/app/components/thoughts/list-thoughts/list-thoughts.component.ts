@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Pensamento } from '../thought-interface';
 import { ThoughtComponent } from "../thought/thought.component";
@@ -27,9 +27,11 @@ export class ListThoughtsComponent {
   filtro: string = '';
   favoritos: boolean = false;
   listaFavoritos: Pensamento[] = [];
+  titulo: string = 'Meu mural';
 
   constructor(
-    private service: ThoughtService
+    private service: ThoughtService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -56,7 +58,19 @@ export class ListThoughtsComponent {
       })
   }
 
+  recarregarComponente() {
+    this.titulo = 'Meu mural';
+    this.favoritos = false;
+    this.haMaisPensamentos = true;
+    this.paginaAtual = 1;
+    this.service.listar(this.paginaAtual, this.filtro, this.favoritos)
+      .subscribe(listaPensamentos => {
+        this.listaPensamentos = listaPensamentos;
+      });
+  }
+
   listarFavoritos(){
+    this.titulo = 'Meus favoritos';
     this.favoritos = true;
     this.haMaisPensamentos = true;
     this.paginaAtual = 1;
